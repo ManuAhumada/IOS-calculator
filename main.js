@@ -31,12 +31,14 @@ function clearScreen() {
         $(".sign").addClass("orange").removeClass("selected");
     }
     pantalla = "0";
+    firstNumber = 0;
     $("#clear").text("AC");
     changeFontSize('55px')
     updateScreen(pantalla);
 }
 
 function updateScreen(number) {
+    
     number = number.search(/\./) === -1 ? number.substring(0, 9) : number.substring(0, 10);
 
     switch ((number.replace(/,|\./g, '')).length) {
