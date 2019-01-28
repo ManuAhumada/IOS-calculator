@@ -1,0 +1,72 @@
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    background-color: lighten(#000, 20%)
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif
+    font-weight: 100
+    
+#calculator
+    background-color: black
+    margin: auto
+    width: 237px
+    height: 400px
+    #screen
+        width: 237px
+        height: 120px
+        position: relative
+        #text
+            color: white
+            height: auto
+            width: 100%
+            position: absolute
+            bottom: 0px         
+            padding: 0 15px
+            font-size: 60px
+            text-align: right
+    #buttons
+        width: 100%
+        height: 280px
+        button
+            width: 50px
+            height: 50px
+            border-radius: 50%
+            margin-left: 5px
+            margin-top: 5px   
+            border: none    
+            font-size: 20px  
+            &:focus
+                outline: none      
+        .light-gray
+            background-color: lighten(#000, 70%)
+            transition: background-color 0.5s 
+            &:hover
+                background-color: lighten(lighten(#000, 70%), 10%)
+                transition: background-color 0.25s 
+        .gray
+            background-color: lighten(#000, 25%)
+            color: white
+            transition: background-color 0.5s 
+            &:hover
+                transition: background-color 0.25s 
+                background-color: lighten(lighten(#000, 25%), 20%)
+        .orange
+            background-color: darken(orange, 5%)
+            color: white
+            transition: background-color 0.5s, color 0.5s
+            &:hover
+                transition: background-color 0.25s 
+                background-color: lighten(darken(orange, 5%), 20%)
+            .selected
+                color: darken(orange, 5%)
+                background-color: white
+                transition: background-color 0.5s, color 2s
+        .large
+                width: 109px
+                border-radius: 50px
+                text-align: left
+                padding-left: 20px
+            
+            

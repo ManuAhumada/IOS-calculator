@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="calculator">
+        <div id="screen">
+            <div id="text">0</div>
+        </div>
+        <div id="buttons">
+                <button id="clear" class="light-gray" onclick="clearScreen()">AC</button>
+                <button class="light-gray" onclick="changeSign()">&plusmn</button>
+                <button class="light-gray" onclick="porcentage()">%</button>
+                <button class="orange" onclick="sign('/')">÷</button>
+                <button class="gray" onclick="typeNumber('7')">7</button>
+                <button class="gray" onclick="typeNumber('8')">8</button>
+                <button class="gray" onclick="typeNumber('9')">9</button>
+                <button class="orange" onclick="sign('*')">×</button>
+                <button class="gray" onclick="typeNumber('4')">4</button>
+                <button class="gray" onclick="typeNumber('5')">5</button>
+                <button class="gray" onclick="typeNumber('6')">6</button>
+                <button class="orange" onclick="sign('-')">−</button>
+                <button class="gray" onclick="typeNumber('1')">1</button>
+                <button class="gray" onclick="typeNumber('2')">2</button>
+                <button class="gray" onclick="typeNumber('3')">3</button>
+                <button class="orange" onclick="sign('+')">+</button>
+                <button class="gray large" onclick="typeNumber('0')">0</button>
+                <button class="gray" onclick="typeNumber(',')">,</button>
+                <button class="orange" onclick="equal()">=</button>              
+        </div>
+    </div>
+</body>
+</html>
