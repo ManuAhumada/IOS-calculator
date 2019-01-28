@@ -2,21 +2,21 @@ var pantalla = "0"
 
 function typeNumber(number){
 
-    if ((pantalla.replace(/,|\./g, '')).length === 9) return;
+    if ((pantalla.replace(/,|\.|-/g, '')).length === 9) return;
+    if (pantalla.search(/\./) !== -1 && number === '.') return;
 
-    if ((pantalla === "0" || pantalla === "-0") && number != ",") {
+
+    if ((pantalla === "0" || pantalla === "-0") && number !== ".") {
+        if (number === "0") return;        
         if (pantalla === "-0") {
             pantalla = "-" + number;
-            alert(2);
         } else {
-            pantalla = number;
-            alert(1);
+            pantalla = number;        
         }   
         $("#clear").text("C");
     } else {
-        if (pantalla.search(",") == -1 && pantalla.replace('.', '').length % 3 === 0) {
-            pantalla += ".";
-            alert(3);
+        if (pantalla.search(/\./g) == -1 && (pantalla.replace(/,|-/g, '')).length % 3 === 0) {
+            pantalla += ",";
         }
         pantalla += number;
     }
