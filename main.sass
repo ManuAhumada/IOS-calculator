@@ -18,13 +18,15 @@ body
         height: 120px
         position: relative
         #text
+            max-height: 60px
+            overflow: hidden
             color: white
             height: auto
             width: 100%
             position: absolute
             bottom: 0px         
             padding: 0 15px
-            font-size: 60px
+            font-size: 55px
             text-align: right
     #buttons
         width: 100%
@@ -59,10 +61,10 @@ body
             &:hover
                 transition: background-color 0.25s 
                 background-color: lighten(darken(orange, 5%), 20%)
-            .selected
+        .selected
                 color: darken(orange, 5%)
                 background-color: white
-                transition: background-color 0.5s, color 2s
+                transition: background-color 0.5s, color 1s    
         .large
                 width: 109px
                 border-radius: 50px
